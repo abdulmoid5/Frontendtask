@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      let arr = [-6, -91, 1011, -100, 84, -22, 0, 1, 473];
+      function solution(list) {
+        const divisibleArray = list.filter((x) => x % 4 == 0); // This will return all numbers which are divisible by 11
+        const sortedDivisibleArray = divisibleArray.sort((a, b) => a - b); // Sort the array. The minimum value will be zero th node of sorted array
+        return sortedDivisibleArray.length > 0 ? sortedDivisibleArray[0] : null;
+      }
+      const result = solution(arr);
+      console.log(result);
+    </script>
+  </body>
+</html>
